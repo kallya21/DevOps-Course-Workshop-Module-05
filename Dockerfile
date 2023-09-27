@@ -1,2 +1,2 @@
 FROM alpine
-ENTRYPOINT ["echo", "Hello World"]
+ENTRYPOINT ["echo", "Goodbye World"]
