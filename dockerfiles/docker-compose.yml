@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  cliapp:
+    image: cliapp
+    build: ./Dockerfile.cliapp
+
+  webapp:
+    image: webapp
+    build: ./Dockerfile.webapp
+    ports: 
+      - "5000:5000"
+
+volumes:
+  TODO: COMPLETE THIS
