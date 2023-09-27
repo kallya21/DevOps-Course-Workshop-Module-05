@@ -4,12 +4,21 @@ services:
   cliapp:
     image: cliapp
     build: ./Dockerfile.cliapp
+    volumes: 
+      - type: volume
+        source: shared-volume
+        target: /opt/chimera/data
 
   webapp:
     image: webapp
     build: ./Dockerfile.webapp
-    ports: 
-      - "5000:5000"
+    volumes: 
+      - type: volume
+        source: shared-volume
+        target: /opt/chimera/data
+    ports:
+      - 5000:80
 
 volumes:
-  TODO: COMPLETE THIS
+  shared-volume:
+  
